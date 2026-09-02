@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TropiMix — Tropical Drink Maker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <nav class="navbar">
+      <a class="brand" href="#"><span>🍹</span> TropiMix</a>
+      <div class="nav-actions">
+        <button class="music-toggle" id="musicToggle" aria-label="Play music">🎵 <span>Play music</span></button>
+        <a class="nav-link" href="#mixer">Start Mixing <span>→</span></a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">☀️ YOUR LITTLE TROPICAL ESCAPE</p>
+          <h1>Mix your mood.<br><em>Sip your paradise.</em></h1>
+          <p class="hero-text">Create a refreshing tropical drink from the ingredients you already love.</p>
+          <a class="primary-btn" href="#mixer">✨ Start Mixing</a>
+        </div>
+        <div class="hero-art" aria-label="Tropical drink illustration">
+          <div class="sun"></div>
+          <div class="leaf leaf-one">🌿</div>
+          <div class="leaf leaf-two">🌿</div>
+          <div class="fruit fruit-one">🍍</div>
+          <div class="fruit fruit-two">🥭</div>
+          <div class="glass">
+            <div class="drink-liquid"></div>
+            <div class="straw"></div>
+            <div class="glass-shine"></div>
+          </div>
+          <div class="ice ice-a"></div><div class="ice ice-b"></div>
+        </div>
+      </section>
+
+      <section class="mixer" id="mixer">
+        <div class="section-heading">
+          <p class="eyebrow">BUILD YOUR SIP</p>
+          <h2>What are we mixing today?</h2>
+          <p>Pick one from each category. We’ll do the tropical magic ✨</p>
+        </div>
+
+        <div class="step">
+          <div class="step-title"><span>01</span><h3>Choose your base</h3></div>
+          <div class="choices" id="baseChoices"></div>
+        </div>
+
+        <div class="step">
+          <div class="step-title"><span>02</span><h3>Pick your fruit</h3></div>
+          <div class="choices" id="fruitChoices"></div>
+        </div>
+
+        <div class="step">
+          <div class="step-title"><span>03</span><h3>Add your twist</h3></div>
+          <div class="choices" id="twistChoices"></div>
+        </div>
+
+        <div class="mix-area">
+          <button class="mix-btn" id="mixBtn">🍹 Mix my drink</button>
+          <p class="hint">Choose all 3 ingredients first</p>
+        </div>
+      </section>
+
+      <section class="result hidden" id="result">
+        <div class="result-card">
+          <div class="result-visual">
+            <div class="result-sun"></div>
+            <div class="mini-glass"><div class="mini-liquid"></div><div class="mini-straw"></div></div>
+            <span class="result-fruit" id="resultFruit">🥭</span>
+          </div>
+          <div class="result-info">
+            <p class="eyebrow">YOUR TROPICAL CREATION</p>
+            <h2 id="resultName">Mango Sunset</h2>
+            <p id="resultDescription">A sunny, refreshing sip made just for you.</p>
+            <div class="tags" id="resultTags"></div>
+            <div class="recipe">
+              <div><span>🥤 Base</span><strong id="resultBase"></strong></div>
+              <div><span>🍍 Fruit</span><strong id="resultFruitName"></strong></div>
+              <div><span>✨ Twist</span><strong id="resultTwist"></strong></div>
+            </div>
+            <button class="secondary-btn" id="resetBtn">↻ Make another</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Made for sunny moods 🌴</span>
+      <span>TropiMix © 2026</span>
+    </footer>
+  </div>
+  <audio id="bgMusic" src="assets/tropical-loop.wav" loop preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
